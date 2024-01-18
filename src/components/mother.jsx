@@ -30,11 +30,11 @@ const [ids , setIds] = useState("")
           --Select--
           </option>
       
-          <option key={2} value='ladaru'>
+          <option key={2} value='1landaru'>
           පූර්ව ප්‍රසව- මහකුඹුක්කඩවල 
           </option>
 
-          <option key={3} value='purwa'>
+          <option key={3} value='2landaru'>
           
           පූර්ව ප්‍රසව -තරුන ව්‍යාපාරය
           </option>

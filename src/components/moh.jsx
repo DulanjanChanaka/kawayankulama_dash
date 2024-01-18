@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import {  doc, updateDoc } from 'firebase/firestore';
-import { db } from '../firebase/firebase'; 
+import { doc, updateDoc } from 'firebase/firestore';
+import { db } from '../firebase/firebase';
 
 
 function Moh() {
   const [selectedField, setSelectedField] = useState('--Select--'); // Default field
   const [fieldValue, setFieldValue] = useState('');
-const [ids , setIds] = useState("")
+  const [ids, setIds] = useState("")
   const handleUpdateData = async () => {
     try {
       const docRef = doc(db, 'moh', ids); // Replace with your actual document ID
@@ -20,40 +20,40 @@ const [ids , setIds] = useState("")
     }
   };
 
-  const fieldNames = ['--Select Month--','january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december'];
+  const fieldNames = ['--Select Month--', 'january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december'];
 
   return (
     <div className='w-full flex flex-col px-3'>
       <h2 className='text-center text-lg font-bold mb-6'>Update MOH Clinics</h2>
       <select className='w-[180px] mb-6 py-3 px-5 bg-slate-500 text-white rounded-lg' value={ids} onChange={(e) => setIds(e.target.value)}>
-      <option key={1}>
+        <option key={1}>
           --Select--
-          </option>
-      
-         
+        </option>
 
-          <option key={3} value='allinj'>
+
+
+        <option key={3} value='allinj'>
           All injection
-          </option>
+        </option>
 
-          <option key={4} value='familyplan'>
+        <option key={4} value='familyplan'>
           Family plan
-          </option>
+        </option>
 
-       
 
-          <option key={6} value='vdrl'>
+
+        <option key={6} value='vdrl'>
           VDRL / HIV
-          </option>
+        </option>
 
-          <option key={7} value='poshana'>
+        <option key={7} value='poshana'>
           Poshana
-          </option>
+        </option>
 
-          <option key={8} value='new'>
+        <option key={8} value='new'>
           New Married
-          </option>
-       
+        </option>
+
       </select>
       <select className='w-[180px] mb-6 py-3 px-5 bg-slate-400 text-white rounded-lg' value={selectedField} onChange={(e) => setSelectedField(e.target.value)}>
         {fieldNames.map((fieldName) => (
@@ -63,13 +63,13 @@ const [ids , setIds] = useState("")
         ))}
       </select>
       <input
-      className='py-2 px-3 border-2 w-[180px] mb-6 rounded-lg'
+        className='py-2 px-3 border-2 w-[180px] mb-6 rounded-lg'
         type="text"
         placeholder="Field Value"
         value={fieldValue}
         onChange={(e) => setFieldValue(e.target.value)}
       />
-      <button className='py-2 px-3 bg-sky-500 rounded-2xl w-[180px]'  onClick={handleUpdateData}>Update Data</button>
+      <button className='py-2 px-3 bg-sky-500 rounded-2xl w-[180px]' onClick={handleUpdateData}>Update Data</button>
     </div>
   );
 }

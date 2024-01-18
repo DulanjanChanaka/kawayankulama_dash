@@ -24,7 +24,7 @@ const [ids , setIds] = useState("")
 
   return (
     <div className='w-full flex flex-col px-3'>
-      <h2 className='text-center font-bold text-lg mb-6'>Update Weight Clinic</h2>
+      <h2 className='text-center font-bold text-lg mb-6'>Update Woman Clinic</h2>
       <select className='w-[180px] mb-6 py-3 px-5 bg-slate-500 text-white rounded-lg'  value={ids} onChange={(e) => setIds(e.target.value)}>
       <option key={1}>
           --Select--
@@ -37,6 +37,10 @@ const [ids , setIds] = useState("")
 
           <option key={3} value='anamaduwa'>
           MOH ආණමඩුව 
+
+          </option>
+          <option key={4} value='anamaduhosp'>
+          Jadelle සදහා ආණමඩුව 
 
           </option>
 
