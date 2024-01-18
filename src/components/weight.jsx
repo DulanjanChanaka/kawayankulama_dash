@@ -30,19 +30,19 @@ const [ids , setIds] = useState("")
           --Select--
           </option>
       
-          <option key={2} value='dw'>
+          <option key={2} value='4dw'>
           Dangaswewa
           </option>
 
-          <option key={3} value='gk'>
+          <option key={3} value='3gk'>
           Goda Kiwula
           </option>
 
-          <option key={4} value='kw'>
+          <option key={4} value='1kw'>
           Kawayankulama
           </option>
 
-          <option key={5} value='sk'>
+          <option key={5} value='2sk'>
           Sembukuliya
           </option>
        

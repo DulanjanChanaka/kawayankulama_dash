@@ -16,7 +16,7 @@ const Baby = () => {
                 address
             }
 
-            const response = await fetch('https://incomparable-brioche-b13e68.netlify.app/api/babies',{
+            const response = await fetch('https://astounding-cuchufli-3ecd73.netlify.app/api/babies',{
                 method:'POST',
                 headers:{
                     'Content-Type': 'application/json',
